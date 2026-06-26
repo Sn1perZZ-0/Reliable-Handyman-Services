@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliable Handyman Services - Northolt, London</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #1A3A52;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Header/Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e5e5;
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #FF6B35, #FF8C5A);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            margin: 0;
+            color: #1A3A52;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: #999;
+            margin: 0;
+        }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #25D366;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20BA5A;
+            transform: scale(1.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(135deg, #1A3A52 0%, #2d5a7b 100%);
+            color: white;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #FF6B35;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            background: #E85A2A;
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-image {
+            display: none;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            background: #F5F5F5;
+            border-top: 4px solid #FF6B35;
+            padding: 2rem;
+        }
+
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .trust-item h3 {
+            font-size: 2.5rem;
+            color: #FF6B35;
+            margin-bottom: 0.5rem;
+        }
+
+        .trust-item p {
+            color: #1A3A52;
+            font-weight: 600;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1A3A52;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #FF6B35, #FF8C5A);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            background: #FF6B35;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-content h3 {
+            font-size: 1.25rem;
+            color: #1A3A52;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-content p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .get-quote-link {
+            color: #FF6B35;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .get-quote-link:hover {
+            gap: 1rem;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            background: #1A3A52;
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .why-choose-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-choose h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .why-icon {
+            width: 50px;
+            height: 50px;
+            background: #FF6B35;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .why-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .why-content p {
+            color: #d0d0d0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #F5F5F5;
+            padding: 4rem 2rem;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            color: #1A3A52;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #FF6B35;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info p {
+            margin: 1rem 0;
+            color: #1A3A52;
+            font-size: 1rem;
+        }
+
+        .contact-info strong {
+            color: #FF6B35;
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Footer */
+        footer {
+            background: #1A3A52;
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p {
+            color: #d0d0d0;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #d0d0d0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #FF6B35;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+
+            body {
+                overflow-x: hidden;
+            }
+
+            header {
+                padding: 0.75rem;
+                position: fixed;
+                top: 0;
+                z-index: 1000;
+            }
+
+            .header-container {
+                flex-direction: row;
+                gap: 0.5rem;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo-section {
+                gap: 0.5rem;
+                flex: 1;
+            }
+
+            .logo-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+
+            .logo-text h1 {
+                font-size: 1rem;
+            }
+
+            .logo-text p {
+                font-size: 0.65rem;
+            }
+
+            .whatsapp-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+                white-space: nowrap;
+            }
+
+            .hero {
+                margin-top: 60px;
+                padding: 2rem 1rem;
+            }
+
+            .hero::before {
+                width: 250px;
+                height: 250px;
+                top: -50px;
+                right: -50px;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-content h2 {
+                font-size: 1.75rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-content p {
+                font-size: 0.95rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 0.75rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+                padding: 0.85rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .hero-badges {
+                flex-direction: column;
+                gap: 0.75rem;
+                font-size: 0.85rem;
+            }
+
+            .trust-section {
+                padding: 1.5rem 1rem;
+            }
+
+            .trust-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .trust-item h3 {
+                font-size: 1.75rem;
+            }
+
+            .trust-item p {
+                font-size: 0.8rem;
+            }
+
+            .services {
+                padding: 2rem 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .section-header p {
+                font-size: 0.95rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .service-card {
+                border-radius: 8px;
+            }
+
+            .service-image {
+                height: 150px;
+                font-size: 2.5rem;
+            }
+
+            .service-content {
+                padding: 1rem;
+            }
+
+            .service-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .service-content p {
+                font-size: 0.9rem;
+            }
+
+            .why-choose {
+                padding: 2rem 1rem;
+            }
+
+            .why-choose h2 {
+                font-size: 1.75rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .why-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.25rem;
+            }
+
+            .why-content h3 {
+                font-size: 1rem;
+            }
+
+            .why-content p {
+                font-size: 0.9rem;
+            }
+
+            .contact {
+                padding: 2rem 1rem;
+            }
+
+            .contact-container {
+                max-width: 100%;
+            }
+
+            .contact h2 {
+                font-size: 1.75rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .contact p {
+                font-size: 0.95rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                gap: 0.75rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .contact-buttons a {
+                width: 100%;
+                padding: 0.85rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .contact-info {
+                padding: 1.5rem;
+            }
+
+            .contact-info p {
+                margin: 0.75rem 0;
+                font-size: 0.9rem;
+            }
+
+            .floating-whatsapp {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+            }
+
+            footer {
+                padding: 2rem 1rem 1rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .footer-section h3 {
+                font-size: 1rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .footer-section p {
+                font-size: 0.9rem;
+            }
+
+            .footer-bottom {
+                padding-top: 1.5rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                font-size: 13px;
+            }
+
+            header {
+                padding: 0.5rem;
+            }
+
+            .logo-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
+            }
+
+            .logo-text h1 {
+                font-size: 0.9rem;
+            }
+
+            .whatsapp-btn {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.75rem;
+            }
+
+            .hero {
+                margin-top: 55px;
+                padding: 1.5rem 0.75rem;
+            }
+
+            .hero-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero-buttons {
+                gap: 0.5rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                padding: 0.75rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .trust-container {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .trust-item h3 {
+                font-size: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .service-image {
+                height: 120px;
+                font-size: 2rem;
+            }
+
+            .why-choose h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact h2 {
+                font-size: 1.5rem;
+            }
+
+            .floating-whatsapp {
+                bottom: 1rem;
+                right: 1rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo-icon">🔧</div>
+                <div class="logo-text">
+                    <h1>Reliable Handyman</h1>
+                    <p>Northolt, London</p>
+                </div>
+            </div>
+            <a href="https://wa.me/447480451557?text=Hi%20Reliable%20Handyman%20Services,%20I%20would%20like%20to%20inquire%20about%20your%20services." class="whatsapp-btn" target="_blank">
+                📱 WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2>Reliable Handyman Services</h2>
+                <p>From fencing and paving to rat removal and maintenance—we handle every job with expertise and care. Your trusted local handyman in Northolt.</p>
+                
+                <div class="hero-buttons">
+                    <a href="https://wa.me/447480451557?text=Hi%20Reliable%20Handyman%20Services,%20I%20would%20like%20to%20inquire%20about%20your%20services." class="btn-primary" target="_blank">
+                        💬 Chat on WhatsApp
+                    </a>
+                    <a href="tel:07480451557" class="btn-secondary">
+                        📞 Call: 07480451557
+                    </a>
+                </div>
+
+                <div class="hero-badges">
+                    <div class="badge">
+                        <span>✓</span>
+                        <span>24HR Response</span>
+                    </div>
+                    <div class="badge">
+                        <span>📍</span>
+                        <span>Local Experts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <div class="trust-item">
+                <h3>100%</h3>
+                <p>Trusted Service</p>
+            </div>
+            <div class="trust-item">
+                <h3>24/7</h3>
+                <p>Available</p>
+            </div>
+            <div class="trust-item">
+                <h3>✓</h3>
+                <p>Competitive Prices</p>
+            </div>
+            <div class="trust-item">
+                <h3>✓</h3>
+                <p>Fast & Reliable</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>No job too big or too small. We handle everything from minor repairs to complete renovations.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">🪵</div>
+                    <div class="service-content">
+                        <div class="service-icon">🪵</div>
+                        <h3>Fencing</h3>
+                        <p>Professional fence installation and repair. Wooden, metal, or composite options.</p>
+                        <a href="https://wa.me/447480451557" class="get-quote-link" target="_blank">Get Quote →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">🧱</div>
+                    <div class="service-content">
+                        <div class="service-icon">🧱</div>
+                        <h3>Paving</h3>
+                        <p>Expert patio and pathway paving. Durable, beautiful outdoor surfaces.</p>
+                        <a href="https://wa.me/447480451557" class="get-quote-link" target="_blank">Get Quote →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">🏗️</div>
+                    <div class="service-content">
+                        <div class="service-icon">🏗️</div>
+                        <h3>Walls & Repairs</h3>
+                        <p>Wall construction, repairs, and maintenance. Structural and cosmetic work.</p>
+                        <a href="https://wa.me/447480451557" class="get-quote-link" target="_blank">Get Quote →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">💡</div>
+                    <div class="service-content">
+                        <div class="service-icon">💡</div>
+                        <h3>Lighting</h3>
+                        <p>Outdoor and indoor lighting installation. Modern, energy-efficient solutions.</p>
+                        <a href="https://wa.me/447480451557" class="get-quote-link" target="_blank">Get Quote →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">🌿</div>
+                    <div class="service-content">
+                        <div class="service-icon">🌿</div>
+                        <h3>Planting & Landscaping</h3>
+                        <p>Garden design, planting, and landscaping services. Transform your outdoor space.</p>
+                        <a href="https://wa.me/447480451557" class="get-quote-link" target="_blank">Get Quote →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">🐭</div>
+                    <div class="service-content">
+                        <div class="service-icon">🐭</div>
+                        <h3>Rat Removal & Pest Control</h3>
+                        <p>Safe, effective pest removal and prevention. Discreet, professional service.</p>
+                        <a href="https://wa.me/447480451557" class="get-quote-link" target="_blank">Get Quote →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">🔧</div>
+                    <div class="service-content">
+                        <div class="service-icon">🔧</div>
+                        <h3>General Repairs</h3>
+                        <p>All types of home and garden repairs. No job too big or too small.</p>
+                        <a href="https://wa.me/447480451557" class="get-quote-link" target="_blank">Get Quote →</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">🛠️</div>
+                    <div class="service-content">
+                        <div class="service-icon">🛠️</div>
+                        <h3>Maintenance</h3>
+                        <p>Regular maintenance services to keep your property in top condition.</p>
+                        <a href="https://wa.me/447480451557" class="get-quote-link" target="_blank">Get Quote →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="why-choose-container">
+            <h2>Why Choose Reliable Handyman?</h2>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon">✓</div>
+                    <div class="why-content">
+                        <h3>Experienced & Skilled</h3>
+                        <p>Years of experience in all types of handyman work. We know how to get the job done right.</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">🛡️</div>
+                    <div class="why-content">
+                        <h3>Professional & Trustworthy</h3>
+                        <p>Discreet, reliable service. We treat your home with respect and attention to detail.</p>
+                    </div>
+                </div>
+
+                <div class="why-item">
+                    <div class="why-icon">⏱️</div>
+                    <div class="why-content">
+                        <h3>Quick Response Time</h3>
+                        <p>Available 24/7. We respond quickly to your inquiries and get started promptly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2>Get Your Free Quote Today</h2>
+            <p>Contact us via WhatsApp or phone for a free consultation. We'll discuss your project and provide a competitive quote.</p>
+
+            <div class="contact-buttons">
+                <a href="https://wa.me/447480451557?text=Hi%20Reliable%20Handyman%20Services,%20I%20would%20like%20to%20inquire%20about%20your%20services." class="btn-primary" target="_blank">
+                    💬 Chat on WhatsApp
+                </a>
+                <a href="tel:07480451557" class="btn-primary" style="background: #FF6B35;">
+                    📞 Call: 07480451557
+                </a>
+            </div>
+
+            <div class="contact-info">
+                <p><strong>Phone:</strong> 07480451557</p>
+                <p><strong>Location:</strong> Northolt, London, UK</p>
+                <p><strong>Hours:</strong> Available 24/7 for inquiries</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/447480451557?text=Hi%20Reliable%20Handyman%20Services,%20I%20would%20like%20to%20inquire%20about%20your%20services." class="floating-whatsapp" target="_blank" title="Chat on WhatsApp">
+        💬
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>🔧 Reliable Handyman</h3>
+                <p>Your trusted local handyman services in Northolt, London.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#services">Fencing</a></li>
+                    <li><a href="#services">Paving</a></li>
+                    <li><a href="#services">Repairs & Maintenance</a></li>
+                    <li><a href="#services">Pest Control</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📱 <a href="tel:07480451557">07480451557</a></p>
+                <p>📍 Northolt, London, UK</p>
+                <p>⏰ Available 24/7</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Reliable Handyman Services. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
